@@ -34,7 +34,6 @@ plt.figure(figsize=(8, 8))
 graph = nx.Graph()
 graph.add_nodes_from(points)
 
-# Добавляем дуги в граф
 for i in v1:
     graph.add_edge(i[0], i[1], weight=i[2])
 def calc_next(m, s, n, src):
@@ -74,6 +73,5 @@ s = r[1]
 for i, v in enumerate(s):
     d.append([int(s[i-1]), int(s[i])])
 
-# Рисуем всё древо
 nx.draw(graph, points, width=1, edge_color="#A0A0A0", with_labels=True)
 nx.draw(graph, points, width=2, edge_color="blue", edgelist=d, style='dashed')
